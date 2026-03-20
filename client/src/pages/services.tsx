@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Shield, Lock, Star, Cloud, Brain, Check, ChevronDown } from "lucide-react";
+import { Shield, Lock, Star, Cloud, Brain, Eye, Users, Check, ChevronDown } from "lucide-react";
 import CircuitBg from "@/components/circuit-bg";
 import FadeIn from "@/components/fade-in";
 import CTABand from "@/components/cta-band";
@@ -30,6 +30,14 @@ const faqs = [
     a: "Both. We offer structured project engagements (assessments, ATO packages) as well as ongoing advisory retainers for continuous monitoring, POA&M management, and security program evolution. Engagements are scoped to your needs.",
   },
   {
+    q: "What does a cyber threat intelligence engagement look like?",
+    a: "We begin by understanding your industry, threat profile, and existing security tools. From there, we deliver regular threat briefings, analyze indicators of compromise relevant to your environment, and provide actionable recommendations. Engagements can be structured as periodic reports or integrated into your security operations workflow.",
+  },
+  {
+    q: "Do you offer training for non-technical staff?",
+    a: "Absolutely. Our training programs are role-based—we offer executive and board-level awareness sessions, general staff security awareness training, and deep-dive technical workshops for security and IT teams. We also run phishing simulations and tabletop exercises to test and reinforce learning in realistic scenarios.",
+  },
+  {
     q: "Are engagements remote or on-site?",
     a: "We are based in Wayne, NJ and serve clients nationwide. Most engagements are conducted remotely. On-site work is available for clients requiring it and can be scoped accordingly.",
   },
@@ -41,6 +49,8 @@ const iconMap = {
   star: Star,
   cloud: Cloud,
   brain: Brain,
+  eye: Eye,
+  users: Users,
 };
 
 const services = [
@@ -79,6 +89,20 @@ const services = [
     deliverables: ["AI-specific threat model for your deployment architecture", "Prompt injection and adversarial input mitigation strategies", "AI governance policy recommendations", "Secure deployment pattern guidance", "Alignment with NIST AI RMF"],
     engagement: "Assessment-driven. Suitable for organizations deploying LLMs, agentic systems, or ML-powered decision tools.",
     premium: true,
+  },
+  {
+    iconKey: "eye" as keyof typeof iconMap,
+    title: "Cyber Threat Intelligence",
+    overview: "Proactive threat intelligence that goes beyond generic feeds. We deliver contextualized intelligence briefings, indicator-of-compromise (IOC) analysis, and strategic threat assessments tailored to your sector and threat profile.",
+    deliverables: ["Periodic threat landscape briefings", "IOC collection, analysis, and dissemination", "Threat actor profiling relevant to your sector", "Intelligence-driven defense recommendations", "Integration guidance for threat intel platforms (TIPs)"],
+    engagement: "Retainer-based or project-scoped. Ideal for organizations seeking continuous situational awareness.",
+  },
+  {
+    iconKey: "users" as keyof typeof iconMap,
+    title: "Cybersecurity Teams Training",
+    overview: "Your technology is only as strong as the people operating it. We design and deliver cybersecurity training programs tailored to your organization—from board-level awareness to hands-on tabletop exercises and phishing simulations for technical teams.",
+    deliverables: ["Custom security awareness training programs", "Tabletop exercises and incident response simulations", "Phishing simulation campaigns and analysis", "Role-based training for technical and non-technical staff", "Training effectiveness metrics and reporting"],
+    engagement: "Flexible delivery—single workshops, multi-session programs, or ongoing quarterly training retainers.",
   },
 ];
 

@@ -4,6 +4,8 @@ import {
   Lock,
   Star,
   Cloud,
+  Eye,
+  Users,
   Check,
   ArrowRight,
 } from "lucide-react";
@@ -36,6 +38,18 @@ const services = [
     title: "Cloud Security (AWS, Azure, GCP)",
     desc: "Harden your cloud footprint with purpose-built security controls, IAM governance, and automated guardrails.",
     bullets: ["IAM hardening & access reviews", "Logging, monitoring & alerting", "Security automation & vuln mgmt"],
+  },
+  {
+    icon: Eye,
+    title: "Cyber Threat Intelligence",
+    desc: "Stay ahead of adversaries with actionable threat intelligence—contextualized to your industry, threat landscape, and risk profile.",
+    bullets: ["Threat landscape briefings", "IOC analysis & threat feeds", "Intel-driven defense recommendations"],
+  },
+  {
+    icon: Users,
+    title: "Cybersecurity Teams Training",
+    desc: "Build a security-aware culture with tailored training programs—from executive awareness to hands-on technical exercises for your security team.",
+    bullets: ["Security awareness programs", "Tabletop exercises & simulations", "Technical team upskilling"],
   },
 ];
 
@@ -127,6 +141,7 @@ export default function Home() {
         <div className="max-w-[1120px] mx-auto px-6 relative z-10 py-20">
           <div className="max-w-[720px]">
             <div className="mb-5 flex flex-wrap items-center gap-2">
+              <CertBadge label="DVOSB" />
               <CertBadge label="CISA" />
               <CertBadge label="CISM" />
               <CertBadge label="PMP" />
@@ -206,6 +221,7 @@ export default function Home() {
       >
         <div className="max-w-[1120px] mx-auto px-6 flex flex-wrap gap-3 justify-center items-center">
           {[
+            "SBA Certified DVOSB",
             "DHS ISSO Experience",
             "Former AWS Security Controls PM",
             "US Navy Veteran",
@@ -239,7 +255,7 @@ export default function Home() {
               </p>
             </div>
           </FadeIn>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s, i) => (
               <ServiceCard key={i} delay={i * 0.08} {...s} />
             ))}

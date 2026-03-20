@@ -138,6 +138,7 @@ export default function About() {
                   ISSO, U.S. Dept. of Homeland Security
                 </p>
                 <div className="flex gap-1.5 flex-wrap mb-5">
+                  <CertBadge label="DVOSB" />
                   <CertBadge label="CISA" />
                   <CertBadge label="CISM" />
                   <CertBadge label="PMP" />
@@ -146,14 +147,14 @@ export default function About() {
                   <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] mb-2.5" style={{ color: "#64748b" }}>
                     Focus Areas
                   </p>
-                  {["RMF / FedRAMP / ATO Lifecycle", "AWS Security Controls & IAM", "NIST 800-53, ISO 27001, SOC 2", "Cloud Security & AI/ML Risk"].map(
+                  {["RMF / FedRAMP / ATO Lifecycle", "AWS Security Controls & IAM", "NIST 800-53, ISO 27001, SOC 2", "Cloud Security & AI/ML Risk", "SBA-Certified Disabled Veteran-Owned Small Business"].map(
                     (f, i) => (
                       <div
                         key={i}
                         className="text-[13px] py-1"
                         style={{
                           color: "#94a3b8",
-                          borderBottom: i < 3 ? "1px solid rgba(30,41,59,0.8)" : "none",
+                          borderBottom: i < 4 ? "1px solid rgba(30,41,59,0.8)" : "none",
                         }}
                       >
                         {f}

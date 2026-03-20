@@ -27,6 +27,9 @@ export default function Footer() {
             <p className="text-[13px] leading-[1.7] max-w-[320px]" style={{ color: "#475569" }}>
               Veteran-led cybersecurity and compliance support for cloud and AI environments. Serving organizations nationwide from Wayne, NJ.
             </p>
+            <p className="text-[13px] mt-2 leading-[1.6]" style={{ color: "#475569" }}>
+              SBA-Certified Disabled Veteran-Owned Small Business
+            </p>
             <p className="text-xs mt-4 leading-[1.6]" style={{ color: "#334155" }}>
               CyberHub Solutions LLC provides cybersecurity consulting and does not provide legal advice.
             </p>
